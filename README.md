@@ -7,7 +7,7 @@
 
 A serverless ETL pipeline for fetching, storing, and processing currency exchange rates from Open Exchange Rates API to Snowflake and s3 using AWS lambda, where s3 is used for disaster recovery and snowflake is used for storing the data in the layers
 
-**make sure that your lambda runtime and ec2 runtime should be same**
+`make sure that your lambda runtime and ec2 runtime should be same`
 
 - **AWS Lambda**: Executes the main ETL process on a schedule (layer attached which support python 3.9 runtime)
 - **Amazon S3**: Stores raw exchange rate data as JSON files for disaster 
