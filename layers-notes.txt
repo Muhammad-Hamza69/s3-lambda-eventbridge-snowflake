@@ -1,0 +1,14 @@
+- chmod 400 "hacker-key.pem"
+- ssh -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com
+- sudo dnf install python3.11 -y
+- sudo dnf install python3.11-pip -y
+- mkdir snowflake-layer
+- cd snowflake-layer/
+- mkdir python
+- python3.11 -m pip install \
+ --platform manylinux2014_x86_64 \
+ --only-binary=:all: \
+ --target python \
+ requests snowflake-connector-python
+- zip -r ../snowflake-layer.zip python
+- scp -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com:/home/ec2-user/snowflake-layer.zip .
