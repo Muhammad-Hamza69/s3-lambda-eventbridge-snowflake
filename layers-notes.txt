@@ -11,4 +11,5 @@
  --target python \
  requests snowflake-connector-python
 - zip -r ../snowflake-layer.zip python
+- ctrl + D
 - scp -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com:/home/ec2-user/snowflake-layer.zip .
