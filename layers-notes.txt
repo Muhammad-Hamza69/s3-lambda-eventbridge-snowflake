@@ -25,3 +25,37 @@ this is for installing different libraries
  requests \
  selenium \
  lxml
+
+this is for installing chromium and chrome driver in bin/
+- chmod 400 "hacker-key.pem"
+- ssh -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com
+- sudo dnf install python3.11 -y
+- sudo dnf install python3.11-pip -y
+- mkdir layer
+- cd layer/
+- mkdir python 
+- python3.11 -m pip install \ 
+ --platform manylinux2014_x86_64 \
+ --only-binary=:all: \
+ --upgrade \
+ --target python \
+ pandas \
+ yfinance \
+ requests \
+ selenium \
+ lxml
+- mkdir bin
+- curl -L -o chrome.zip https://storage.googleapis.com/chrome-for-testing-public/146.0.7680.153/linux64/chrome-linux64.zip
+- curl -L -o driver.zip https://storage.googleapis.com/chrome-for-testing-public/146.0.7680.153/linux64/chromedriver-linux64.zip
+- cd bin
+- unzip ../chrome.zip
+- unzip ../driver.zip
+- mv chrome-linux64/chrome chromium
+- mv chromedriver-linux64/chromedriver chromedriver
+- rm -rf chrome-linux64
+- rm -rf chromedriver-linux64
+- cd ..
+- zip -r ../layer.zip python bin
+- ctrl + d
+- scp -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com:/home/ec2-user/layer.zip .
+
