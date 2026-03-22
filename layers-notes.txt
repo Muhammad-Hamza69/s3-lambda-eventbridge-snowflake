@@ -13,3 +13,15 @@
 - zip -r ../snowflake-layer.zip python
 - ctrl + D
 - scp -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com:/home/ec2-user/snowflake-layer.zip .
+
+this is for installing different libraries
+- python3.11 -m pip install \ 
+ --platform manylinux2014_x86_64 \
+ --only-binary=:all: \
+ --upgrade \
+ --target python \
+ pandas \
+ yfinance \
+ requests \
+ selenium \
+ lxml
