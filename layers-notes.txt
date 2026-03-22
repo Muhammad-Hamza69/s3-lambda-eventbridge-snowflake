@@ -57,5 +57,5 @@ this is for installing chromium and chrome driver in bin/
 - cd ..
 - zip -r ../layer.zip python bin
 - ctrl + d
-- scp -i "kp-march-practice-mhs.pem" ec2-user@ec2-98-81-52-190.compute-1.amazonaws.com:/home/ec2-user/layer.zip .
+- scp -i "kp-number-one.pem" ec2-user@ec2-34-224-173-79.compute-1.amazonaws.com:/home/ec2-user/layer.zip .
 
