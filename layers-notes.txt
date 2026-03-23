@@ -59,3 +59,5 @@ this is for installing chromium and chrome driver in bin/
 - ctrl + d
 - scp -i "kp-number-one.pem" ec2-user@ec2-34-224-173-79.compute-1.amazonaws.com:/home/ec2-user/layer.zip .
 
+curl -Lo chromium.zip https://github.com/adieuadieu/serverless-chrome/releases/download/v1.0.0-55/stable-headless-chromium-amazonlinux-2017-03.zip
+curl -Lo chromedriver.zip https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip
